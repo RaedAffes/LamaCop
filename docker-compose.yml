@@ -11,7 +11,7 @@ services:
       - ./backend/.env
     environment:
       FRONTEND_URL: ${FRONTEND_URL:-http://20.111.60.184}
-    ports:
+    ports: 
       - "8000:8000"
     extra_hosts:
       - "host.docker.internal:host-gateway"

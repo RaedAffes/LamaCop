@@ -13,7 +13,7 @@ ENV NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXT_TELEMETRY_DISABLED=1 
 RUN npm run build
 
 FROM nginx:1.27-alpine AS runner
